@@ -9,17 +9,22 @@ export default function AppFooterSection() {
             {/* Section Application */}
             <div
                 className="position-relative overflow-hidden space-top overflow-hidden bg-fixed"
-                style={{ backgroundImage: 'url(/img/bg/app_bg_1.png)' }}
+                style={{
+                    backgroundImage: 'url(/img/bg/app_bg_1.png)',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover', // pour que ça prenne tout le conteneur
+                    backgroundPosition: 'center', // centrer l'image
+                }}
             >
                 <div className="container">
                     <div className="app-title-area text-center">
                         <div className="title-area mb-0">
                             <span className="sub-title2 style2">TÉLÉCHARGER L’APPLICATION</span>
-                            <h2 className="sec-title">
+                            <h3 className="sec-title">
                                 Le luxe vous attend. <br /> Réservez votre séjour dès aujourd’hui !
-                            </h2>
+                            </h3>
                             <p className="sec-text">
-                                Entrez dans un univers fluide de réservation d’hôtel, où réserver votre séjour devient aussi simple que quelques clics. Passez votre commande et vivez une expérience agréable.
+                                Entrez dans un univers fluide de réservation d’hôtel, où réserver votre séjour devient aussi simple que quelques clics.
                             </p>
                             <div className="btn-wrap justify-content-center">
                                 <a href="#"><img src="/img/theme-img/app-btn.jpg" alt="img" /></a>
