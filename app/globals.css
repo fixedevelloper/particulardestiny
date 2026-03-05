@@ -38,6 +38,12 @@
     margin-top: -36px !important;
     position: relative !important;
 }
+@media (max-width: 991px) {
+    .header-main .header-logo{
+        padding: 39px 12.5px 25px !important;
+        margin-top: -16px !important;
+    }
+}
 .header-logo {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
@@ -77,4 +83,40 @@
 }
 .sidemenu-wrapper .sidemenu-content {
     background-color: #04223d;;
+}
+
+input[type="checkbox"] {
+    visibility: initial;
+    opacity: 1;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+input[type="checkbox"]:checked  {
+    color: var(--white-color);
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+input[type="checkbox"] ~ label {
+    color: var(--body-color);
+    cursor: pointer;
+    padding-left: 30px;
+    display: none;
+    position: relative;
+}
+input[type="checkbox"]{
+    font-family: var(--icon-font);
+    font-weight: 700;
+    border: 1px solid #4D4D4D;
+    border-top-color: rgb(77, 77, 77);
+    border-right-color: rgb(77, 77, 77);
+    border-bottom-color: rgb(77, 77, 77);
+    border-left-color: rgb(77, 77, 77);
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
 }

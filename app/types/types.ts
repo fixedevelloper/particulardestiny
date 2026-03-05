@@ -115,3 +115,23 @@ export type Image = {
     medium?:string
     icon?:string
 }
+export type CartItem = {
+    id: number;
+    roomId: number;
+    name: string;
+    slug?: string;
+
+    pricePerNight: number;
+
+    arrivalDate: string;
+    departureDate: string;
+
+    adults: number;
+    children: number;
+
+    quantity: number; // nombre de chambres
+
+    image?: Image;
+
+    features: Feature[];
+};

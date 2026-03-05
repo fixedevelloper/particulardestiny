@@ -20,7 +20,7 @@ const fetchRooms = async (params: any) => {
     if (!res.ok) throw new Error("Impossible de récupérer les chambres");
 
     const data = await res.json();
-    return data.data.data || [];
+    return data.data || [];
 };
 
 // Skeleton loader pendant le fetch

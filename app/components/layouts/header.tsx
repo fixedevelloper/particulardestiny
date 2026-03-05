@@ -176,10 +176,10 @@ export function Header() {
                                     <div className="header-button">
 
                                         <Link
-                                            href="/contact"
+                                            href="/cart-reservation"
                                             className="th-btn2 style3 d-sm-block d-none"
                                         >
-                                            RÉSERVER
+                                            Panier
                                             <img
                                                 src="/img/icon/bed.svg"
                                                 alt=""

@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import HomeBookingForm from "./HomeBookingForm";
+import {MapPin} from "lucide-react";
 
 const slides = [
     {
@@ -66,10 +67,6 @@ export default function HeroSection() {
                                 className="hero-slide swiper-slide"
                                 style={{
                                     backgroundImage: `url(${slide.image})`,
-                                   width: 1920, // en px
-                                  /*   opacity: 1,
-                                    transitionDuration: "0s",
-                                    transform: "translate3d(-3840px, 0px, 0px)"*/
                                 }}
                             >
                                 {/* Overlay (luxury effect) */}
@@ -104,9 +101,9 @@ export default function HeroSection() {
                     ))}
                 </Swiper>
                         {/* BOUTONS NAVIGATION CUSTOM */}
-                        {/* BOUTONS NAVIGATION CUSTOM */}
+
                         <button
-                            className="slider-arrow slider-prev"
+                            className="slider-arrow slider-prev d-none d-lg-block"
                             onClick={() => swiperRef.current?.slidePrev()}
                             style={{
                                 backgroundColor: "#00000080",
@@ -128,7 +125,7 @@ export default function HeroSection() {
                         </button>
 
                         <button
-                            className="slider-arrow slider-next"
+                            className="slider-arrow slider-next d-none d-lg-block"
                             onClick={() => swiperRef.current?.slideNext()}
                             style={{
                                 backgroundColor: "#00000080",
@@ -152,9 +149,14 @@ export default function HeroSection() {
                     </div>
                 </div>
             </div>
+
             {/* MAP */}
-            <div className="map-view shape-mockup2" style={{ top: "18%", right: "8%", position: "absolute" }}>
-                <span className="hero-map"><i className="fa-sharp fa-solid fa-location-dot"></i></span>
+            <div className="map-view shape-mockup2" style={{ top: "30%", right: "8%", position: "absolute" }}>
+                <span className="hero-map">
+                    <i className="fa-sharp fa-solid fa-location-dot">
+                    <MapPin size={34}/>
+                </i>
+                </span>
                 <div className="card-view">
                     <div className="map">
                         <a target="_blank" href="https://www.google.com/maps">
@@ -169,23 +171,23 @@ export default function HeroSection() {
             {/* SCAN BOX / ROOM */}
             <div
                 className="scanbox shape-mockup2"
-                style={{ top: "27%", right: "10%", position: "absolute" }}
+                style={{ top: "60%", right: "10%", position: "absolute" }}
             >
                 <div className="sb-frame">
                     <img src="/img/icon/bar-code.svg" alt="Code-barres" />
-                    <div className="sb-divider active"></div>
+                    <div className="sb-divider active"/>
                 </div>
 
                 <div className="room-view">
                     <div className="box-content">
                         <div className="box-img">
-                            <img src="/img/room/room-view.jpg" alt="Chambre" />
+                            <img src="/img/offer/offer_4_3.png" alt="Chambre" />
                             <span className="discount">69000 FCFA / NUIT</span>
                         </div>
 
                         <div className="author">
                 <span className="img">
-                    <img src="/img/icon/author.png" alt="Auteur" />
+                    <img src="/logo.png" alt="Auteur" />
                 </span>
                             <span className="text">Deluxe Exclusive</span>
                         </div>
@@ -194,63 +196,8 @@ export default function HeroSection() {
             </div>
 
             {/* SCROLL DOWN */}
-     {/*       <div className="scroll-down">
-                <a href="#about-sec" className="hero-scroll-wrap"><span>Scroll Down</span></a>
-            </div>*/}
             {/* BOOKING */}
             <HomeBookingForm />
-           {/* <div className="booking-area style3">
-                <div className="container">
-                    <form className="booking-form style3">
-
-                        <div className="hero-wrap">
-
-                             LIEU
-                            <input
-                                type="text"
-                                name="location"
-                                placeholder="Entrez le lieu"
-                                value={form.location}
-                                onChange={handleChange}
-                            />
-
-                             ARRIVÉE
-                            <input
-                                type="date"
-                                name="arrival"
-                                value={form.arrival}
-                                onChange={handleChange}
-                            />
-
-                             DÉPART
-                            <input
-                                type="date"
-                                name="departure"
-                                value={form.departure}
-                                onChange={handleChange}
-                            />
-
-                             INVITÉS
-                            <select
-                                name="guests"
-                                value={form.guests}
-                                onChange={handleChange}
-                            >
-                                <option value="">Invités</option>
-                                <option value="2_adult">2 Adultes</option>
-                                <option value="2_adult_1_child">2 Adultes 1 Enfant</option>
-                                <option value="family">Famille</option>
-                            </select>
-
-                             BOUTON
-                            <button type="submit" className="th-btn2">
-                                RÉSERVER
-                            </button>
-
-                        </div>
-                    </form>
-                </div>
-            </div>*/}
         </>
     );
 }

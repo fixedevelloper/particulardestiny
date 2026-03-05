@@ -13,11 +13,12 @@ import "swiper/css/pagination";
 import BookingSidebar from "../../../components/BookingSidebar";
 import {Room, RoomImage} from "../../../types/types";
 import { Swiper as SwiperClass } from "swiper";
+import {useCartStore} from "../../../store/cartStore";
 
 export default function RoomDetailPage() {
     const { slug } = useParams();
     const [room, setRoom] = useState<Room>();
-
+    const addItem = useCartStore(state => state.addItem)
     useEffect(() => {
         const fetchRoom = async () => {
             const res = await fetch(

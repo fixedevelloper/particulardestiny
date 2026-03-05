@@ -1,12 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import {Feature, Room} from "../types/types";
+import {useCartStore} from "../store/cartStore";
+import {calculateNights} from "../utils/index";
+
 interface BookingSidebarProps {
     room: Room; // ou Room | null si ça peut être vide
 }
 
-export default function BookingSidebar({ room }: BookingSidebarProps) {
+export default function BookingSidebar({room}: BookingSidebarProps) {
     const [checkIn, setCheckIn] = useState("");
     const [checkOut, setCheckOut] = useState("");
     const [adults, setAdults] = useState(1);
@@ -14,7 +17,7 @@ export default function BookingSidebar({ room }: BookingSidebarProps) {
 
     const [services, setServices] = useState<Feature[]>([]);
     const [selectedServices, setSelectedServices] = useState<Feature[]>([]);
-
+    const addItem = useCartStore(state => state.addItem)
     const [total, setTotal] = useState(0);
 
     // 🔥 fetch services depuis API
@@ -25,25 +28,10 @@ export default function BookingSidebar({ room }: BookingSidebarProps) {
                 // ⚠️ adapte selon ta structure API
                 setServices(data.data || []);
             });
+
     }, []);
-
-    // 🔥 calcul nombre de nuits
-    const getNights = (): number => {
-        if (!checkIn || !checkOut) return 0;
-
-        // forcer le type en Date
-        const start = new Date(checkIn as string | number | Date);
-        const end = new Date(checkOut as string | number | Date);
-
-        // end - start retourne un nombre en ms
-        const diffMs: number = end.getTime() - start.getTime();
-
-        // convertir en jours
-        return Math.max(diffMs / (1000 * 60 * 60 * 24), 0);
-    };
-
     // 🔥 toggle service
-    const toggleService = (service:Feature) => {
+    const toggleService = (service: Feature) => {
         setSelectedServices((prev) => {
             if (prev.find((s) => s.id === service.id)) {
                 return prev.filter((s) => s.id !== service.id);
@@ -52,19 +40,53 @@ export default function BookingSidebar({ room }: BookingSidebarProps) {
         });
     };
 
+
     // 🔥 calcul total
     useEffect(() => {
-        const nights = getNights();
-        const roomTotal = nights * (room?.price || 0);
+
+        const nights = calculateNights(checkIn, checkOut) || 0;
+
+        const roomPrice = Number(room?.price ?? 0);
+        const roomTotal = nights * roomPrice;
 
         const servicesTotal = selectedServices.reduce(
-            (sum, s) => sum + (s.price || 0),
+            (sum, s) => sum + Number(s.price ?? 0),
             0
         );
 
-        setTotal(roomTotal + servicesTotal);
+        const total = roomTotal + servicesTotal;
+
+        setTotal(total);
+        console.log({
+            checkIn,
+            checkOut,
+            nights,
+            roomPrice: room?.price,
+            selectedServices
+        });
     }, [checkIn, checkOut, selectedServices, room]);
 
+    function handleReservation() {
+        const res = addItem({
+            id: Date.now(),
+            roomId: room.id,
+            name: room.title,
+            slug: room.slug,
+            pricePerNight: Number(room.price),
+            arrivalDate: checkIn,
+            departureDate: checkOut,
+            adults,
+            children,
+            quantity: 1,
+            image: room.image,
+            features: selectedServices
+        })
+        console.log(res);
+    }
+
+    useEffect(() => {
+        console.log(selectedServices);
+    }, [selectedServices]);
     return (
         <div className="col-xl-3 col-lg-4">
             <aside className="sidebar-area">
@@ -152,19 +174,25 @@ export default function BookingSidebar({ room }: BookingSidebarProps) {
                         <h3 className="box-title mb-25">Services supplémentaires</h3>
 
                         {services.map((service) => (
+
                             <div key={service.id} className="service-list">
                                 <div className="list">
+
                                     <input
                                         type="checkbox"
                                         checked={selectedServices.some((s) => s.id === service.id)}
-                                        onChange={() => toggleService(service)}
+                                        onChange={() => {
+                                            console.log(service)
+                                            toggleService(service)
+                                        }}
                                     />
+
                                     <label>{service.name}</label>
                                 </div>
 
                                 <span className="text">
-                            {service.price ? `${service.price} FCFA` : "gratuit"}
-                        </span>
+            {service.price ? `${service.price} FCFA` : "gratuit"}
+        </span>
                             </div>
                         ))}
 
@@ -176,7 +204,9 @@ export default function BookingSidebar({ room }: BookingSidebarProps) {
 
                         {/* BOUTON */}
                         <div className="btn-form">
-                            <button className="th-btn style1">
+                            <button type='button'
+                                    onClick={handleReservation} // ✅ ici
+                                    className="th-btn style1">
                                 RÉSERVER MAINTENANT
                             </button>
                         </div>
@@ -198,7 +228,7 @@ export default function BookingSidebar({ room }: BookingSidebarProps) {
                         </h5>
 
                         <div className="banner-logo">
-                            <img src="/logo.png" alt="Rotal" height={100} width={120} />
+                            <img src="/logo.png" alt="Rotal" height={100} width={120}/>
                         </div>
 
                         <div className="offer">
