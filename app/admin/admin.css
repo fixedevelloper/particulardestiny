@@ -1,0 +1,15 @@
+.main{
+
+}
+
+@media (min-width: 768px) { /* md et plus */
+    .main {
+        margin-left: 250px; /* largeur de la sidebar */
+    }
+}
+
+@media (max-width: 767px) { /* mobile */
+    .main {
+        margin-left: 0; /* pas de décalage sur mobile */
+    }
+}
