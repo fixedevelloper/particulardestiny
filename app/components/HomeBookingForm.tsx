@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import {useRouter} from "next/navigation";
+import {MapPin} from "lucide-react";
 
 export default function HomeBookingForm() {
 
@@ -59,7 +60,9 @@ export default function HomeBookingForm() {
                             <div className="box-icon">
                                 <img src="/logo.png" alt="img" width={30}/>
                             </div>
-                            <i className="fas fa-map-marker-alt me-2"></i>
+                            <i className="fas fa-map-marker-alt me-2">
+                                <MapPin />
+                            </i>
                             <input
                                 type="text"
                                 name="location"
@@ -100,7 +103,7 @@ export default function HomeBookingForm() {
 
                             {/* Guests */}
                             <div className="form-group">
-                                <label>Guests</label>
+                                <label>Client</label>
                                 <select
                                     name="guests"
                                     value={formData.guests}
@@ -109,18 +112,18 @@ export default function HomeBookingForm() {
                                     className="form-select"
                                 >
                                     <option value="" disabled>
-                                        Adult
+                                        Clients
                                     </option>
-                                    <option value="1">2 Adult Only</option>
-                                    <option value="2">2 Adult 1 Child</option>
-                                    <option value="3">2 Adult 2 Child</option>
-                                    <option value="4">3 or 4+ Person</option>
+                                    <option value="1">2 Adulte Seul</option>
+                                    <option value="2">2 Adultes 1 Enfant</option>
+                                    <option value="3">2 Adultes 2 Enfants</option>
+                                    <option value="4">3 or 4+ Persones</option>
                                 </select>
                             </div>
 
                             <div className="form-btn">
                                 <button type="submit" className="th-btn2 style1">
-                                    BOOK
+                                    RESERVER
                                 </button>
                             </div>
 

@@ -3,6 +3,15 @@
 body {
     font-family: var(--font-poppins);
 }
+.main-menu a {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--body-font);
+    color: #d8dbdc;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+}
 .slider-arrow {
     background-color: rgba(0,0,0,0.5);
     border-radius: 50%;
