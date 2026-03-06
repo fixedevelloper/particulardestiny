@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import {Feature, Room} from "../types/types";
 import {useCartStore} from "../store/cartStore";
 import {calculateNights} from "../utils/index";
+import {enqueueSnackbar} from "notistack";
 
 interface BookingSidebarProps {
     room: Room; // ou Room | null si ça peut être vide
@@ -81,7 +82,7 @@ export default function BookingSidebar({room}: BookingSidebarProps) {
             image: room.image,
             features: selectedServices
         })
-        console.log(res);
+        enqueueSnackbar("Reservation ajouter avec success", { variant: "success" });
     }
 
     useEffect(() => {

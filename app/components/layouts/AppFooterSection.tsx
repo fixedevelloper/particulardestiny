@@ -2,6 +2,7 @@ import ScrollToTop from "./ScrollToTop";
 import React from "react";
 import {Copyright, Mail, MapPin, Phone} from "lucide-react";
 import Link from "next/link";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function AppFooterSection() {
     return (
@@ -177,7 +178,7 @@ export default function AppFooterSection() {
                     </div>
                 </div>
             </footer>
-
+            <WhatsAppButton />
             <ScrollToTop />
         </>
     );

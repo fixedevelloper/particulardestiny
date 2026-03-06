@@ -119,7 +119,7 @@ export function RoomForm({ room: initialRoom }: RoomFormProps) {
 
             const response = await axiosServices.post(url, formData);
 
-            alert("✅ Chambre enregistrée");
+            alert("✅ Suite enregistrée");
             router.push("/admin/rooms");
 
         } catch (error: any) {
@@ -139,7 +139,7 @@ export function RoomForm({ room: initialRoom }: RoomFormProps) {
         <div className="container mt-4">
 
             <h2 className="mb-4">
-                {initialRoom ? "Modifier la chambre" : "Ajouter une chambre"}
+                {initialRoom ? "Modifier la chambre" : "Ajouter une Suites"}
             </h2>
 
             <form onSubmit={handleSubmit} className="card shadow-sm p-4">
@@ -292,32 +292,6 @@ export function RoomForm({ room: initialRoom }: RoomFormProps) {
                             })
                         }
                     />
-
-                </div>
-
-                {/* IMAGE */}
-
-                <div className="mb-3">
-
-                    <label>Image</label>
-
-                    <input
-                        type="file"
-                        className="form-control"
-                        onChange={(e) =>
-                            handleImageChange(
-                                e.target.files?.[0] || null
-                            )
-                        }
-                    />
-
-                    {preview && (
-                        <img
-                            src={preview}
-                            className="mt-2 rounded"
-                            style={{ width: 150 }}
-                        />
-                    )}
 
                 </div>
 

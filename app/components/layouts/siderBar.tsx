@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import {ChevronRight, Mail, MapPin, Minus, Phone, Plus, X,} from "lucide-react";
+import {ChevronRight, Mail, MapPin, Menu, Minus, Phone, Plus, X,} from "lucide-react";
+import {useCartStore} from "../../store/cartStore";
 
 interface MenuItem {
     label: string;
@@ -24,6 +25,8 @@ const menus: MenuItem[] = [
     {
         label: "Particular Destiny Suites",
         children: [
+            {label: "RESERVATIONS SUITES", href: "/reservation-suites"},
+            {label: "O'TABOO", href: "/otaboo"},
             { label: "FAQ", href: "/faq" },
             { label: "Témoignages", href: "/temoignage" },
         ],
@@ -42,7 +45,7 @@ export function SiderBar({ isOpen, onClose }: SiderBarProps) {
     const [openMenu, setOpenMenu] = useState<string | null>(null);
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
-
+    const count = useCartStore((state) => state.count());
     const toggleMenu = (label: string) =>
         setOpenMenu(openMenu === label ? null : label);
     const toggleMenus = () => setOpen((prev) => !prev);
@@ -118,6 +121,23 @@ export function SiderBar({ isOpen, onClose }: SiderBarProps) {
                                 );
                             })}
                         </ul>
+                        <div className="row mt-4">
+                            <div className="col-md-12">
+
+
+                                <Link
+                                    href="/cart-reservation"
+                                    className="th-btn2 style1 d-lg-none"
+                                >
+                                    Panier({count})
+                                    <img
+                                        src="/img/icon/bed.svg"
+                                        alt=""
+                                    />
+                                </Link>
+
+                            </div>
+                        </div>
                     </div>
                         {/* Contact */}
                         <div

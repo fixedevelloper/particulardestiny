@@ -4,12 +4,21 @@ import { useCartStore } from "../../store/cartStore";
 import Link from "next/link";
 import {Calendar, Check, CheckSquare2, Star, User} from "lucide-react";
 import React from "react";
+import Breadcrumb from "../../components/layouts/Breadcrumb";
 
 export default function CartReservationPage() {
 
     const { items, total, removeItem } = useCartStore();
 
     return (
+        <>
+            <Breadcrumb
+                title={"Panier"}
+                items={[
+                    { label: "Accueil", href: "/" },
+                    { label: "Panier", href: "/cart-reservation" },
+                ]}
+            />
         <section className="space">
             <div className="container">
                 <div className="row gy-4">
@@ -130,5 +139,6 @@ export default function CartReservationPage() {
                 </div>
             </div>
         </section>
+            </>
     );
 }

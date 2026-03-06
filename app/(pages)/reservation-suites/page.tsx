@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import {Star} from "lucide-react";
 import BookingSection from "../../components/BookingSection";
 import Link from "next/link";
+import Breadcrumb from "../../components/layouts/Breadcrumb";
 
 export default function RoomsPage() {
     const [rooms, setRooms] = useState<any[]>([]);
@@ -35,6 +36,13 @@ export default function RoomsPage() {
 
     return (
         <>
+            <Breadcrumb
+                title={"Reservation suites"}
+                items={[
+                    { label: "Accueil", href: "/" },
+                    { label: "Reservation suites", href: "/contactez-nous" },
+                ]}
+            />
             <section className="overflow-hidden space">
                 <div className="container">
 

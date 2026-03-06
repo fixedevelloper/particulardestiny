@@ -74,7 +74,7 @@ export default function ImageMediaCard({
 
     const handleUpload = async () => {
         if (!newImage.file) return;
-
+        setLoading(true);
         const formData = new FormData();
         formData.append("file", newImage.file);
         formData.append("name", newImage.name || newImage.file.name);
@@ -84,6 +84,7 @@ export default function ImageMediaCard({
         setNewImage({ name: "", alt: "" });
         setActiveTab("library");
         fetchImages(1);
+        setLoading(false);
     };
 
     const handleDelete = async (id: number) => {
@@ -454,10 +455,13 @@ export default function ImageMediaCard({
                                     />
 
                                     <button
-                                        className="btn btn-success w-100 mt-3"
                                         onClick={handleUpload}
+                                        className="btn btn-success w-100 mt-3"
+                                        disabled={loading}
                                     >
-                                        Upload Image
+                                        {loading
+                                            ? "Enregistrement..."
+                                                : "Ajouter"}
                                     </button>
                                 </div>
                             </div>

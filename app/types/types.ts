@@ -58,35 +58,44 @@ export type ReservationStatus =
 
 export type PaymentStatus = "pending" | "paid" | "failed" | "refunded";
 
-export interface Reservation {
+type ReservationItem = {
     id: number;
-    user_id: number;
-    room_id: number;
-
+    room_name?: string;
     check_in: string;
     check_out: string;
+    price: number;
+    quantity: number;
+    adults:number,
+    children:number,
+};
 
-    adults: number;
-    children: number;
-    total_guests: number;
+export type Reservation = {
+    id: number;
+    user?: { id: number; name: string; email: string };
+    country?: { id: number; name: string };
+    details: {
+        name: string;
+        surname: string;
+        email: string;
+        phone: string;
+        message?: string;
+        subtotal: number;
+        tax: number;
+        discount: number;
+        total_price: number;
+        status: string;
+        payment_status: string;
+        payment_method: string;
+        payment_reference?: string;
+        confirmed_at?: string;
+        cancelled_at?: string;
 
-    price_per_night: number;
-    nights: number;
-    subtotal: number;
-    tax: number;
-    discount: number;
-    total_price: number;
+    };
+    meta?: any;
+    items: ReservationItem[];
+    timestamps: { created_at: string; updated_at: string };
+};
 
-    status: ReservationStatus;
-    payment_status: PaymentStatus;
-    meta?: Record<string, any> | null;
-
-    confirmed_at?: string | null;
-    cancelled_at?: string | null;
-
-    created_at: string;
-    updated_at: string;
-}
 export type PaymentState = "pending" | "paid" | "failed";
 
 export interface Payment {

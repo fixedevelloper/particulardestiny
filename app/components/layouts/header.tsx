@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, {useState} from "react";
 import {SiderBar} from "./siderBar";
 import {Clock, Headset, Menu, MessageCircle} from "lucide-react";
+import {useCartStore} from "../../store/cartStore";
 
 
 const leftMenu = [
@@ -18,7 +19,7 @@ const rightMenu = [
 
 export function Header() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-
+    const count = useCartStore((state) => state.count());
     const toggleSidebar = () => setSidebarOpen((prev) => !prev);
 
     return (
@@ -175,11 +176,12 @@ export function Header() {
                                 <div className="col-auto">
                                     <div className="header-button">
 
+
                                         <Link
                                             href="/cart-reservation"
                                             className="th-btn2 style3 d-sm-block d-none"
                                         >
-                                            Panier
+                                            Panier({count})
                                             <img
                                                 src="/img/icon/bed.svg"
                                                 alt=""

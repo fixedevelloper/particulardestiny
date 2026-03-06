@@ -7,6 +7,7 @@ import {ErrorBoundary, FallbackProps} from "react-error-boundary";
 import {Star} from "lucide-react";
 import PaymentModal from "../../components/PaymentModal";
 import {Room} from "../../types/types";
+import Link from "next/link";
 
 // Fetch rooms côté client
 const fetchRooms = async (params: any) => {
@@ -103,9 +104,9 @@ function RoomsList({ location, arrivalDate, departureDate, guests }: any) {
                                 </div>
 
                                 <h3 className="box-title">
-                                    <a href={`/room-details/${room.slug}`}>
+                                    <Link href={`/room-details/${room.slug}`}>
                                         {room.title}
-                                    </a>
+                                    </Link>
                                 </h3>
 
                                 <div className="box-review">
@@ -124,13 +125,13 @@ function RoomsList({ location, arrivalDate, departureDate, guests }: any) {
                                 </div>
 
                                 <div className="mt-10">
-                                    <a
-                                        href='#'
+                                    <Link
+                                        href={`/room-details/${room.slug}`}
                                         className="th-btn2 style2"
-                                        onClick={() => setIsOpen(true)}
+
                                     >
-                                        RESERVER
-                                    </a>
+                                        VOIR LES DÉTAILS
+                                    </Link>
                                 </div>
 
                             </div>

@@ -17,27 +17,23 @@ export default function RoomsPage() {
         queryFn: fetchRooms,
     });
 
-    if (isLoading) return <p>Chargement des chambres...</p>;
-    if (isError) return <p className='text-dark'>Impossible de récupérer les chambres</p>;
+    if (isLoading) return <p>Chargement des suites...</p>;
+    if (isError) return <p className='text-dark'>Impossible de récupérer les suites</p>;
 
     return (
         <div className="container-fluid p-4">
-            {/* Header avec titre et bouton Ajouter */}
-            <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap">
-                <h2 className="mb-2 mb-md-0 text-dark">Liste des Chambres</h2>
-                <Link href='/admin/types-rooms' className="btn btn-outline-success">
-                    Type de suites
-                </Link>
-                <Link href='/admin/categories-rooms' className="btn btn-dark">
-                    Categories
-                </Link>
-                <Link href='/admin/rooms/add' className="btn btn-primary">
-                    Ajouter une chambre
-                </Link>
+            {/* Header */}
+            <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <h2 className="mb-2 mb-md-0 text-dark">Liste des suites</h2>
+                <div className="d-flex flex-wrap gap-2">
+                    <Link href='/admin/types-rooms' className="btn btn-outline-success">Type de suites</Link>
+                    <Link href='/admin/categories-rooms' className="btn btn-dark">Categories</Link>
+                    <Link href='/admin/rooms/add' className="btn btn-primary">Ajouter</Link>
+                </div>
             </div>
 
-            {/* Tableau responsive */}
-            <div className="table-responsive shadow-sm rounded">
+            {/* Tableau desktop */}
+            <div className="d-none d-md-block table-responsive shadow-sm rounded">
                 <table className="table table-striped table-bordered table-hover align-middle mb-0">
                     <thead className="table-dark">
                     <tr>
@@ -55,7 +51,7 @@ export default function RoomsPage() {
                     {rooms?.map((room) => (
                         <tr key={room.id}>
                             <td>{room.id}</td>
-                            <td className="flex items-center gap-2">
+                            <td className="d-flex align-items-center gap-2">
                                 {room.image?.thumb && (
                                     <img
                                         src={room.image.thumb}
@@ -82,12 +78,40 @@ export default function RoomsPage() {
                     {!rooms || rooms.length === 0 && (
                         <tr>
                             <td colSpan={8} className="text-center text-muted">
-                                Aucune chambre disponible
+                                Aucune suites disponible
                             </td>
                         </tr>
                     )}
                     </tbody>
                 </table>
+            </div>
+
+            {/* Cards mobile */}
+            <div className="d-md-none">
+                {rooms?.map(room => (
+                    <div key={room.id} className="card shadow-sm mb-3">
+                        <div className="card-body">
+                            <div className="d-flex align-items-center mb-2">
+                                {room.image?.thumb && (
+                                    <img src={room.image.thumb} width={50} alt={room.title} className="rounded me-2" />
+                                )}
+                                <h5 className="mb-0">{room.title}</h5>
+                            </div>
+                            <p className="mb-1"><strong>Prix:</strong> {room.price.toLocaleString()} FCFA</p>
+                            <p className="mb-1"><strong>Capacité:</strong> {room.capacity}</p>
+                            <p className="mb-1"><strong>Taille:</strong> {room.size || "-"}</p>
+                            <p className="mb-1"><strong>Catégorie:</strong> {room.category?.name || "-"}</p>
+                            <p className="mb-1"><strong>Type:</strong> {room.room_type?.name || "-"}</p>
+                            <div className="d-flex gap-2 mt-2 flex-wrap">
+                                <Link href={'/admin/rooms/'+room.id+'/edit'} className="btn btn-sm btn-outline-primary flex-grow-1">Éditer</Link>
+                                <button className="btn btn-sm btn-outline-danger flex-grow-1">Supprimer</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+                {!rooms || rooms.length === 0 && (
+                    <p className="text-center text-muted py-3">Aucune suites disponible</p>
+                )}
             </div>
         </div>
     );
