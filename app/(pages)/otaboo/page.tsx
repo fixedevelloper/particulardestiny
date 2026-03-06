@@ -4,6 +4,7 @@ import styles from "./otaboo.module.css"
 import Image from "next/image"
 import Link from "next/link"
 import { services } from "./services"
+import PdfModal from "../../components/PdfOtabooModal";
 
 export default function OtabooPage() {
 
@@ -39,7 +40,7 @@ export default function OtabooPage() {
                                 raffinée.
                             </p>
 
-                            <Link href="/reservation-suites" className="th-btn style1">
+                            <Link href="/reservation-suites" className="th-btn2 style1 bg-danger">
                                 Réserver une table
                             </Link>
                         </div>
@@ -111,7 +112,7 @@ export default function OtabooPage() {
                         Découvrez notre sélection de plats traditionnels et internationaux
                         préparés par nos chefs.
                     </p>
-
+                    <PdfModal />
                 </div>
             </section>
 

@@ -19,26 +19,29 @@ interface SiderBarProps {
 
 const menus: MenuItem[] = [
     {
-        label: "Accueil",
+        label: "ACCUEIL",
         href: "/"
     },
-    {
-        label: "Particular Destiny Suites",
-        children: [
-            {label: "RESERVATIONS SUITES", href: "/reservation-suites"},
-            {label: "O'TABOO", href: "/otaboo"},
-            { label: "FAQ", href: "/faq" },
-            { label: "Témoignages", href: "/temoignage" },
-        ],
-    },
-    {
-        label: "Nos Services",
-        href: "/services",
-    },
-    { label: "Galerie", href: "/gallery" },
-    { label: "À propos", href: "/about" },
+    {label: "RESERVATIONS SUITES", href: "/reservation-suites"},
+    {label: "O'TABOO", href: "/otaboo"},
+    /*    {
+           label: "Particular Destiny Suites",
+           children: [
 
-    { label: "Contactez-nous", href: "/contact" },
+
+               { label: "FAQ", href: "/faq" },
+               { label: "Témoignages", href: "/temoignage" },
+        ],
+       },
+   /*    {
+           label: "Nos Services",
+           href: "/services",
+       },
+       { label: "Galerie", href: "/gallery" },*/
+    {label: "PROMOTIONS ENCOURS", href: "/promotions"},
+    { label: "À PROPOS", href: "/apropos-nous" },
+
+    { label: "CONTACTEZ-NOUS", href: "/contactez-nous" },
 ];
 
 export function SiderBar({ isOpen, onClose }: SiderBarProps) {

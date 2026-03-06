@@ -103,7 +103,7 @@ export default function HomeBookingForm() {
 
                             {/* Guests */}
                             <div className="form-group">
-                                <label>Client</label>
+                                <label>Clients</label>
                                 <select
                                     name="guests"
                                     value={formData.guests}
@@ -111,9 +111,9 @@ export default function HomeBookingForm() {
                                     required
                                     className="form-select"
                                 >
-                                    <option value="" disabled>
-                                        Clients
-                                    </option>
+                                 {/*   <option value="" disabled>
+                                       Choisir Clients
+                                    </option>*/}
                                     <option value="1">2 Adulte Seul</option>
                                     <option value="2">2 Adultes 1 Enfant</option>
                                     <option value="3">2 Adultes 2 Enfants</option>
