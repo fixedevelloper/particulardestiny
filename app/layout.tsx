@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body
             className="poppins.className home-luxury-hotel-2 bg-repeat"
             style={{
-                backgroundImage: "url('/img/bg/body-bg_shape.png')",
+               // backgroundImage: "url('/img/bg/body-bg_shape.png')",
             }}
         >
         <AppProvidersWrapper>
