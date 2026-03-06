@@ -130,7 +130,7 @@ export default function HomeBookingForm() {
                         </div>
 
                         <a className="th-btn th-icon" href="/reservation-suites">
-                            ACCOMMODATION
+                            NOS SUITES
                         </a>
 
                     </div>
