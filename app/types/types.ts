@@ -37,7 +37,7 @@ export interface Room {
     category?: Category;
     room_type?: RoomType;
     features?: Feature[];
-    images?: RoomImage[];
+    images?: Image[];
 
     created_at: string;
     updated_at: string;
@@ -45,7 +45,7 @@ export interface Room {
 export interface RoomImage {
     id: number;
     room_id: number;
-    image: Image;
+    image?: Image;
     created_at: string;
     updated_at: string;
 }

@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import BookingSidebar from "../../../components/BookingSidebar";
-import {Room, RoomImage} from "../../../types/types";
+import {Image, Room, RoomImage} from "../../../types/types";
 import { Swiper as SwiperClass } from "swiper";
 import {useCartStore} from "../../../store/cartStore";
 
@@ -66,7 +66,7 @@ export default function RoomDetailPage() {
                                                     <SwiperSlide key={img.id}>
 
                                                         <img
-                                                            src={room?.image?.thumb}
+                                                            src={img?.thumb}
                                                             className="w-100 rounded"
                                                             style={{ height: "600px", objectFit: "cover" }}
                                                             alt={room?.title}
@@ -82,11 +82,12 @@ export default function RoomDetailPage() {
                                                 spaceBetween={10}
                                                 slidesPerView={4}
                                             >
-                                                {room.images?.map((img:RoomImage) => (
-                                                    <SwiperSlide key={img.id}>
+                                                {room.images?.map((img1:Image) => (
+
+                                                    <SwiperSlide key={img1.id}>
                                                         <img
-                                                            src={img?.image?.thumb}
-                                                            alt={img?.image?.name}
+                                                            src={img1?.thumb}
+                                                            alt={img1?.name}
                                                             className="w-100 rounded"
                                                             style={{ height: "80px", objectFit: "cover", cursor: "pointer" }}
                                                         />
@@ -129,10 +130,10 @@ export default function RoomDetailPage() {
                                 <div className="mt-5">
                                     <h3>Galerie</h3>
                                     <div className="row">
-                                        {room.images?.map((img:RoomImage) => (
+                                        {room.images?.map((img:Image) => (
                                             <div key={img.id} className="col-md-4 mb-3">
                                                 <img
-                                                    src={img?.image?.thumb}
+                                                    src={img?.thumb}
                                                     className="w-100 rounded"
                                                     alt={room?.image?.name}
                                                 />
