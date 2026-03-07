@@ -5,6 +5,7 @@ import React, { useState, useRef } from "react";
 import './../globals.css'
 import {Header} from "../components/layouts/header";
 import AppFooterSection from "../components/layouts/AppFooterSection";
+import FloatingCartButton from "../components/layouts/FloatingCartButton";
 
 export default function PageLayout({
                                        children,
@@ -23,6 +24,7 @@ export default function PageLayout({
 
             </div>
             <AppFooterSection />
+            <FloatingCartButton />
         </div>
     );
 }

@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import HomeBookingForm from "./HomeBookingForm";
-import {MapPin} from "lucide-react";
+import {MapPin, Star} from "lucide-react";
 
 const slides = [
     {
@@ -79,7 +79,9 @@ export default function HeroSection() {
                                             {/* STARS */}
                                             <div className="hero-star-rating">
                                                 {[...Array(5)].map((_, i) => (
-                                                    <i key={i} className="fas fa-star"></i>
+                                                    <i key={i} className="fas fa-star">
+                                                        <Star size={24} />
+                                                    </i>
                                                 ))}
                                             </div>
 

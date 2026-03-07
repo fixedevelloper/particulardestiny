@@ -5,6 +5,7 @@ import {Star} from "lucide-react";
 import BookingSection from "../../components/BookingSection";
 import Link from "next/link";
 import Breadcrumb from "../../components/layouts/Breadcrumb";
+import FloatingCartButton from "../../components/layouts/FloatingCartButton";
 
 export default function RoomsPage() {
     const [rooms, setRooms] = useState<any[]>([]);
@@ -155,6 +156,7 @@ export default function RoomsPage() {
                 </div>
             </section>
             <BookingSection />
+
         </>
     );
 }

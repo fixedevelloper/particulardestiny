@@ -86,7 +86,9 @@ export function SiderBar({ isOpen, onClose }: SiderBarProps) {
                                         `}
                                     >
                                         {menu.href && !menu.children && (
-                                            <Link href={menu.href}><ChevronRight size={16} className="mr-2 inline-block" />{menu.label}</Link>
+                                            <Link href={menu.href} onClick={
+                                                onClose
+                                            }><ChevronRight size={16} className="mr-2 inline-block" />{menu.label}</Link>
                                         )}
 
                                         {menu.children && (

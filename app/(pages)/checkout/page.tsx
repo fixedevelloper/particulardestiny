@@ -1,7 +1,6 @@
 'use client'
 import React, {useEffect, useState} from "react";
 import {useCartStore} from "../../store/cartStore";
-import Link from "next/link";
 import {User} from "lucide-react";
 
 import { calculateNights } from "../../utils";

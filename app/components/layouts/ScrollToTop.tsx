@@ -1,76 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-/*
-export default function ScrollToTop() {
-    const [scroll, setScroll] = useState(0);
-    const [visible, setVisible] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = (scrollTop / docHeight) * 100;
-            setScroll(progress);
-            setVisible(scrollTop > 300); // afficher après 300px
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    const handleClick = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-
-    return (
-        <div
-            className={`scroll-top ${visible ? "visible" : ""}`}
-            onClick={handleClick}
-            style={{
-                cursor: "pointer",
-                position: "fixed",
-                right: 30,
-                bottom: 60,
-                width: 50,
-                height: 50,
-                zIndex: 9999,
-            }}
-        >
-            <svg
-                className="progress-circle svg-content"
-                width="100%"
-                height="100%"
-                viewBox="0 0 100 100"
-            >
-                <circle
-                    cx="50"
-                    cy="50"
-                    r="49"
-                    fill="none"
-                    stroke="#eee"
-                    strokeWidth="4"
-                />
-                <circle
-                    cx="50"
-                    cy="50"
-                    r="49"
-                    fill="none"
-                    stroke="#ff5a5f"
-                    strokeWidth="4"
-                    strokeDasharray={2 * Math.PI * 49} // périmètre du cercle
-                    strokeDashoffset={2 * Math.PI * 49 * (1 - scroll / 100)} // scroll en %
-                    strokeLinecap="round"
-                    style={{
-                        transition: "stroke-dashoffset 0.3s linear",
-                        transform: "rotate(-90deg)",
-                        transformOrigin: "50% 50%",
-                    }}
-                />
-            </svg>
-        </div>
-    );
-}*/
-
 export default function ScrollToTop() {
     const [scroll, setScroll] = useState(0);
 
@@ -100,8 +29,8 @@ export default function ScrollToTop() {
         <div
             onClick={handleClick}
             style={{
-                width: "80px",
-                height: "80px",
+                width: "60px",
+                height: "60px",
                 position: "fixed",
                 bottom: "20px",
                 right: "20px",
