@@ -66,7 +66,7 @@ export default function OfferSection() {
             id="offer-sec"
         >
             <div className="shadow-area mb-0">
-                <div className="shadow-title">NOS SUITES</div>
+               {/* <div className="shadow-title">NOS SUITES</div>*/}
             </div>
 
             <div className="container">
@@ -121,13 +121,13 @@ export default function OfferSection() {
 
                                                 <h6 className="box-price">{room.price} FCFA / nuit</h6>
 
-                                                <div className="room-card-meta">
+                                          {/*      <div className="room-card-meta">
                                                     {room.features?.map((f, i) => (
                                                         <span key={i}>
-                                                    <img src={f.icon?.icon} alt="icon" /> {f.name}
+                                                    <img src={f.icon?.icon} alt="icon"  /> {f.name}
                                                 </span>
                                                     ))}
-                                                </div>
+                                                </div>*/}
 
                                                 <div className="mt-10">
 
