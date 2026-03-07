@@ -195,9 +195,9 @@ export function SiderBar({ isOpen, onClose }: SiderBarProps) {
                             </div>
                         </div>
 
-                        {/* Découvrir les chambres */}
+                        {/* Découvrir les Suites */}
                         <div className="widget menu-rooms-area footer-widget">
-                            <h3 className="h4 text-center">Découvrez votre chambre idéale</h3>
+                            <h3 className="h4 text-center">Découvrez votre Suite idéale</h3>
                             <div className="menu-rooms-list">
                                 {[
                                     { img: "/img/offer/offer_4_3.png", title: "Deluxe King Bed" },

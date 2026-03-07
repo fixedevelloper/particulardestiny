@@ -39,7 +39,7 @@ export default function RoomDetailPage() {
                 title={room.title}
                 items={[
                     { label: "Accueil", href: "/" },
-                    { label: "Chambres", href: "/rooms" },
+                    { label: "Suites", href: "/rooms" },
                     { label: room.title }
                 ]}
             />
@@ -104,7 +104,7 @@ export default function RoomDetailPage() {
                                 {/* DESCRIPTION */}
                                 <div className="page-content">
                                     <h2 className="box-title mt-4">
-                                        À propos de la chambre
+                                        À propos de la Suite
                                     </h2>
                                     <p className="box-text">
                                         {room.description}
@@ -112,7 +112,7 @@ export default function RoomDetailPage() {
 
                                     {/* CARACTÉRISTIQUES */}
                                     <h2 className="box-title mt-5 mb-3">
-                                        Caractéristiques de la chambre
+                                        Caractéristiques de la Suite
                                     </h2>
                                     <div className="room-checklist mb-60">
                                         <div className="checklist style2 list-four-column">
@@ -149,7 +149,7 @@ export default function RoomDetailPage() {
                                         width="100%"
                                         height="300"
                                         loading="lazy"
-                                        title="Localisation de la chambre"
+                                        title="Localisation de la Suite"
                                     ></iframe>
                                 </div>
                             </div>

@@ -68,7 +68,7 @@ export default function RoomTypePage() {
         <div className="container-fluid p-4">
             {/* Header */}
             <div className="d-flex justify-content-between align-items-center mb-4">
-                <h2>Types de chambres</h2>
+                <h2>Types de Suites</h2>
                 <button
                     className="btn btn-primary"
                     onClick={() => openModal()}

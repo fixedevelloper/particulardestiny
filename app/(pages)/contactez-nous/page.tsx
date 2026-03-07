@@ -113,7 +113,7 @@ export default function ContactPage() {
                                         <select name="subject" className="form-select nice-select" required>
                                             <option value="" disabled selected hidden>Sujet</option>
                                             <option value="Luxury Hotel">Hôtel de luxe</option>
-                                            <option value="Rooms">Chambres</option>
+                                            <option value="Rooms">Suites</option>
                                             <option value="Hotel">Hôtel</option>
                                         </select>
                                     </div>

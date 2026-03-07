@@ -1,16 +1,18 @@
+import Link from "next/link";
+
 const services = [
     {
         subtitle: "SÉJOUR & RESTAURATION",
         title: "Restaurant & Bar",
         text: "La vie n'est pas la même sans bonne nourriture. Nos restaurants offrent une variété de cuisines à découvrir, préparées avec des légumes frais et des herbes que vous pouvez cueillir directement à la ferme.",
-        img: "/img/service/service_card_5_1.jpg",
+        img: "/img/service/service3.jpg",
         link: "/service-details",
     },
     {
-        subtitle: "SERVICES DE CHAMBRE",
-        title: "Service de Nettoyage de Chambre",
+        subtitle: "SERVICES DE Suite",
+        title: "Service de Nettoyage de Suite",
         text: "Nous proposons une large gamme de services et de locations de voitures pour nos clients. La catégorie de réservation d'hôtel implique le processus de réservation d'hébergement pour les voyageurs.",
-        img: "/img/service/service_card_5_2.jpg",
+        img: "/img/service/service2.jpg",
         link: "/service-details",
     },
     {
@@ -46,9 +48,9 @@ export default function ServiceSection() {
                                         <a href={service.link}>{service.title}</a>
                                     </h3>
                                     <p className="box-text">{service.text}</p>
-                                    <a href="/about" className="th-btn2 style2 th-icon">
+                                    <Link href="/apropos-nous" className="th-btn2 style2 th-icon">
                                         EN SAVOIR PLUS
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -56,9 +58,9 @@ export default function ServiceSection() {
                 </div>
 
                 <div className="d-flex justify-content-center mt-60 text-center">
-                    <a href="/package" className="th-btn2 style4 ser-btn">
+                    <Link href="/reservation-suites" className="th-btn2 style4 ser-btn">
                         Explorer Plus
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

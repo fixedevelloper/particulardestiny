@@ -3,7 +3,7 @@ import Link from "next/link";
 const pricingPlans = [
     {
         title: "Basique",
-        price: 290,
+        price: 290000,
         duration: "/Mois",
         popular: false,
         features: [
@@ -18,7 +18,7 @@ const pricingPlans = [
     },
     {
         title: "Avancé",
-        price: 590,
+        price: 590000,
         duration: "/Mois",
         popular: true,
         features: [
@@ -33,7 +33,7 @@ const pricingPlans = [
     },
     {
         title: "Premium",
-        price: 790,
+        price: 790000,
         duration: "/Mois",
         popular: false,
         features: [

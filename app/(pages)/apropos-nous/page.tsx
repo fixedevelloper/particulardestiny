@@ -36,7 +36,7 @@ export default function AboutPage() {
                                 <div className="counter-card">
                                     <div className="media-body">
                                         <h2 className="box-number"><span className="counter-number">290</span>+</h2>
-                                        <p className="box-text">Chambres de luxe</p>
+                                        <p className="box-text">Suites de luxe</p>
                                     </div>
                                 </div>
                                 <div className="divider"></div>

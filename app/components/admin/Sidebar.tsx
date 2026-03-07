@@ -14,7 +14,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
 
     const menu = [
         { name: "Dashboard", href: "/admin/dashboard" },
-        { name: "Chambres", href: "/admin/rooms" },
+        { name: "Suites", href: "/admin/rooms" },
         { name: "Features", href: "/admin/features" },
         { name: "Réservations", href: "/admin/bookings" },
         { name: "Utilisateurs", href: "/admin/users" },

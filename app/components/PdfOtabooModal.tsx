@@ -7,7 +7,7 @@ export default function PdfModal() {
     const [show, setShow] = useState(false);
     const [pdf, setPdf] = useState("");
 
-    const openPdf = (file) => {
+    const openPdf = (file:any) => {
         setPdf(file);
         setShow(true);
     };
@@ -36,7 +36,7 @@ export default function PdfModal() {
 
             {/* Modal */}
             {show && (
-                <div className="modal fade show d-block" tabIndex="-1">
+                <div className="modal fade show d-block">
                     <div className="modal-dialog modal-fullscreen-xl-down modal-xl modal-dialog-centered">
                         <div className="modal-content">
 

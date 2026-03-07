@@ -35,7 +35,7 @@ export default function PaymentModal({
                     {/* Header */}
                     <div className="modal-header">
                         <div className="title-area mb-40">
-                            <span className="sub-title2 style1 mb-15">Paiement de la chambre</span>
+                            <span className="sub-title2 style1 mb-15">Paiement de la Suite</span>
                             <h2 className="sec-title text-white">{room.title}</h2>
                         </div>
                         <button type="button" className="btn-close" onClick={onClose}/>

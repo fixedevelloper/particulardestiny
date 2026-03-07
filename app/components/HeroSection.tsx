@@ -15,17 +15,17 @@ const slides = [
     {
         title: "Suites de Luxe à Bonapriso",
         text: "Ambiance chaleureuse et services haut de gamme au cœur de Bonapriso.",
-        image: "/img/hero/hero_bg_4_1.jpg",
+        image: "/img/hero/1.png",
     },
     {
         title: "Hôtel de Luxe Exclusif et Sophistiqué",
         text: "Profitez d'une expérience premium et inoubliable.",
-        image: "/img/hero/hero_bg_3_2.jpg",
+        image: "/img/hero/2.png",
     },
     {
         title: "Découvrez l’Harmonie Parfaite du Resort de Luxe",
         text: "Détendez-vous en famille dans un cadre luxueux.",
-        image: "/img/hero/hero_bg_3_3.jpg",
+        image: "/img/hero/3.png",
     },
 ];
 
@@ -181,7 +181,7 @@ export default function HeroSection() {
                 <div className="room-view">
                     <div className="box-content">
                         <div className="box-img">
-                            <img src="/img/offer/offer_4_3.png" alt="Chambre" />
+                            <img src="/img/offer/offer_4_3.png" alt="Suite" />
                             <span className="discount">69000 FCFA / NUIT</span>
                         </div>
 

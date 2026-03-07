@@ -11,7 +11,7 @@ export default function AppFooterSection() {
             <div
                 className="position-relative overflow-hidden space-top overflow-hidden bg-fixed"
                 style={{
-                    backgroundImage: 'url(/img/bg/app_bg_1.png)',
+                    backgroundImage: 'url(/img/bg/appbg.jpg)',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover', // pour que ça prenne tout le conteneur
                     backgroundPosition: 'center', // centrer l'image
@@ -22,7 +22,7 @@ export default function AppFooterSection() {
                         <div className="title-area mb-0">
                             <span className="sub-title2 style2">TÉLÉCHARGER L’APPLICATION</span>
                             <h3 className="sec-title">
-                                Le luxe vous attend. <br /> Réservez votre séjour dès aujourd’hui !
+                            {/*    Le luxe vous attend. <br /> */}Réservez votre séjour dès aujourd’hui !
                             </h3>
                             <p className="sec-text">
                                 Entrez dans un univers fluide de réservation d’hôtel, où réserver votre séjour devient aussi simple que quelques clics.
@@ -75,7 +75,7 @@ export default function AppFooterSection() {
                                     <div className="menu-all-pages-container">
                                         <ul className="menu">
                                             <li><Link href="/apropos-nous">À propos</Link></li>
-                                            <li><Link href="/reservation-suites">Chambres en vedette</Link></li>
+                                            <li><Link href="/reservation-suites">Suites en vedette</Link></li>
                                             <li><Link href="/services">Nos meilleurs services</Link></li>
                                             <li><Link href="/contactez-nous">Demander une réservation</Link></li>
                                             <li><Link href="/contactez-nous">Carrière</Link></li>

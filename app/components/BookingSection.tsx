@@ -42,7 +42,7 @@ export default function BookingSection() {
             );
 
             const data = await res.json();
-            setRooms(data.data); // chambres disponibles
+            setRooms(data.data); // Suites disponibles
         } catch (error) {
             console.error(error);
         } finally {
@@ -66,7 +66,7 @@ export default function BookingSection() {
 
                                     <div className="title-area mb-40">
                                 <span className="sub-title2 style1 mb-15">
-                                    RÉSERVATION DE CHAMBRES
+                                    RÉSERVATION DE SuiteS
                                 </span>
                                         <h2 className="sec-title text-white">
                                             Vérifier la disponibilité
@@ -149,10 +149,10 @@ export default function BookingSection() {
                     {/* RÉSULTATS */}
                     <div className="col-xl-7">
                         <div className="text-white">
-                            <h4>Chambres disponibles</h4>
+                            <h4>Suites disponibles</h4>
 
                             {rooms.length === 0 && !loading && (
-                                <p>Aucune chambre trouvée</p>
+                                <p>Aucune Suite trouvée</p>
                             )}
 
                             {rooms.map((room:Room) => (

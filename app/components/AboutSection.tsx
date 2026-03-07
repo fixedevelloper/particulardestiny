@@ -12,23 +12,23 @@ const aboutSlides = [
     {
         image: "/img/normal/about_4_2.png",
         icon: "/img/icon/feature_card_3.svg",
-        title: "Équipements complets de la chambre",
+        title: "Équipements complets de la Suite",
         link: "/room",
-        text: "Nos chambres sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque chambre.",
+        text: "Nos Suites sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque Suite.",
     },
     {
         image: "/img/normal/about_4_3.jpg",
         icon: "/img/icon/feature_card_2.svg",
         title: "Annulation sous 24H",
         link: "/room",
-        text: "Nos chambres sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque chambre.",
+        text: "Nos Suites sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque Suite.",
     },
     {
         image: "/img/normal/about_4_4.png",
         icon: "/img/icon/feature_card_1.svg",
         title: "Sécurité garantie",
         link: "/room",
-        text: "Nos chambres sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque chambre.",
+        text: "Nos Suites sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque Suite.",
     },
 ];
 
@@ -43,7 +43,7 @@ export default function AboutSection() {
                         <div className="col-xxl-3">
                             <div className="img-box7">
                                 <div className="img1">
-                                    <img src="img/normal/about_4_1.png" alt="Image à propos" />
+                                    <img src="img/normal/about-01.jpg" alt="Image à propos" />
                                 </div>
                             </div>
 

@@ -18,7 +18,7 @@ const fetchRooms = async (params: any) => {
         cache: "no-store",
     });
 
-    if (!res.ok) throw new Error("Impossible de récupérer les chambres");
+    if (!res.ok) throw new Error("Impossible de récupérer les Suites");
 
     const data = await res.json();
     return data.data || [];
@@ -41,7 +41,7 @@ function RoomsSkeleton() {
     );
 }
 
-// Composant qui affiche les chambres
+// Composant qui affiche les Suites
 function RoomsList({ location, arrivalDate, departureDate, guests }: any) {
     const [isOpen, setIsOpen] = useState(false);
     const { data: rooms } = useQuery<Room[], Error>({
@@ -53,7 +53,7 @@ function RoomsList({ location, arrivalDate, departureDate, guests }: any) {
     if (!rooms || rooms?.length === 0) {
         return (
             <div className="text-center">
-                <h3>Aucune chambre disponible 😔</h3>
+                <h3>Aucune Suite disponible 😔</h3>
                 <p>Essayez d’autres dates ou une autre localisation.</p>
             </div>
         );

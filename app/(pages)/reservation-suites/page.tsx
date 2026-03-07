@@ -68,7 +68,7 @@ export default function RoomsPage() {
                         ))}
                     </div>
 
-                    {/* CHAMBRES */}
+                    {/* SuiteS */}
                     <div className="row gy-4 filter-active">
                         {filteredRooms.map((room, index) => (
                             <div key={room.id} className="col-lg-4 col-xxl-aut">

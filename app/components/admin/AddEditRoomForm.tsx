@@ -139,7 +139,7 @@ export function RoomForm({ room: initialRoom }: RoomFormProps) {
         <div className="container mt-4">
 
             <h2 className="mb-4">
-                {initialRoom ? "Modifier la chambre" : "Ajouter une Suites"}
+                {initialRoom ? "Modifier la Suite" : "Ajouter une Suites"}
             </h2>
 
             <form onSubmit={handleSubmit} className="card shadow-sm p-4">

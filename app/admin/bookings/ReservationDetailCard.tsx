@@ -92,7 +92,7 @@ export function ReservationDetail({ reservation, onEditItem, onCancelItem, onMar
                                         <div className="card-body d-flex flex-column">
                                             <h5 className="card-title">
                                                 <Bed size={16} className="me-1" />
-                                                {item.room_name || "Chambre"}
+                                                {item.room_name || "Suite"}
                                             </h5>
                                             <div className="mb-2">
                                                 <span className="badge rounded-pill bg-primary me-1">

@@ -66,7 +66,7 @@ export default function OfferSection() {
             id="offer-sec"
         >
             <div className="shadow-area mb-0">
-                <div className="shadow-title">CHAMBRES & SUITES</div>
+                <div className="shadow-title">SuiteS & SUITES</div>
             </div>
 
             <div className="container">

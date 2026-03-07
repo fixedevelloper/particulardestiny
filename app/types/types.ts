@@ -138,7 +138,7 @@ export type CartItem = {
     adults: number;
     children: number;
 
-    quantity: number; // nombre de chambres
+    quantity: number; // nombre de Suites
 
     image?: Image;
 

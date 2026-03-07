@@ -3,7 +3,7 @@ const hotelFacilities = [
     { icon: "/img/icon/hotel-icon1-1.svg", text: "Piscine" },
     { icon: "/img/icon/hotel-icon1-6.svg", text: "Bien-être & Spa" },
     { icon: "/img/icon/hotel-icon1-2.svg", text: "Petit-déjeuner gratuit" },
-    { icon: "/img/icon/hotel-icon1-7.svg", text: "Chambres bien aménagées" },
+    { icon: "/img/icon/hotel-icon1-7.svg", text: "Suites bien aménagées" },
     { icon: "/img/icon/hotel-icon1-3.svg", text: "Animaux & soins pour animaux" },
     { icon: "/img/icon/hotel-icon1-8.svg", text: "Parking" },
     { icon: "/img/icon/hotel-icon1-4.svg", text: "Bar sur le toit" },
@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
             <div className="container">
                 <div className="why-wrap1">
                     <div className="why-img-box1">
-                        <img src="/img/normal/why_1.jpg" alt="Installations de l'hôtel" />
+                        <img src="/img/normal/why.jpg" alt="Installations de l'hôtel" />
                     </div>
                     <div className="why-wrap-content">
                         <div className="title-area">
