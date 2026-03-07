@@ -196,7 +196,7 @@ export function SiderBar({ isOpen, onClose }: SiderBarProps) {
                         </div>
 
                         {/* Découvrir les Suites */}
-                        <div className="widget menu-rooms-area footer-widget">
+                       {/* <div className="widget menu-rooms-area footer-widget">
                             <h3 className="h4 text-center">Découvrez votre Suite idéale</h3>
                             <div className="menu-rooms-list">
                                 {[
@@ -222,7 +222,7 @@ export function SiderBar({ isOpen, onClose }: SiderBarProps) {
                                     </a>
                                 ))}
                             </div>
-                        </div>
+                        </div>*/}
 
                 </div>
             </div>

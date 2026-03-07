@@ -66,7 +66,7 @@ export default function OfferSection() {
             id="offer-sec"
         >
             <div className="shadow-area mb-0">
-                <div className="shadow-title">SuiteS & SUITES</div>
+                <div className="shadow-title">NOS SUITES</div>
             </div>
 
             <div className="container">
@@ -74,7 +74,7 @@ export default function OfferSection() {
                     <div className="col-12 text-center">
                         <div className="title-area">
                             <span className="sub-title2">CONFORT LUXUEUX</span>
-                            <h2 className="sec-title text-white">Chambres & Suites</h2>
+                            <h2 className="sec-title text-white">NOS SUITES</h2>
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 const hotelFacilities = [
     { icon: "/img/icon/hotel-icon1-5.svg", text: "WiFi haut débit gratuit" },
-    { icon: "/img/icon/hotel-icon1-1.svg", text: "Piscine" },
-    { icon: "/img/icon/hotel-icon1-6.svg", text: "Bien-être & Spa" },
+   // { icon: "/img/icon/hotel-icon1-1.svg", text: "Piscine" },
+    //{ icon: "/img/icon/hotel-icon1-6.svg", text: "Bien-être & Spa" },
     { icon: "/img/icon/hotel-icon1-2.svg", text: "Petit-déjeuner gratuit" },
     { icon: "/img/icon/hotel-icon1-7.svg", text: "Suites bien aménagées" },
-    { icon: "/img/icon/hotel-icon1-3.svg", text: "Animaux & soins pour animaux" },
+    { icon: "/img/icon/hotel-icon1-6.svg", text: "Ascenseur" },
     { icon: "/img/icon/hotel-icon1-8.svg", text: "Parking" },
     { icon: "/img/icon/hotel-icon1-4.svg", text: "Bar sur le toit" },
 ];

@@ -2,47 +2,56 @@ import Link from "next/link";
 
 const pricingPlans = [
     {
-        title: "Basique",
-        price: 290000,
-        duration: "/Mois",
+        title: "Suite Standard",
+        price: 130000,
+        duration: "/Nuitée",
+        description: 'Nos Suites Standard offrent tout le confort moderne pour un séjour des plus agréables. Idéal pour un séjour d’affaires ou de détente au sein du Particular Destiny Suites Hotel. ',
         popular: false,
         features: [
-            "Forfaits personnels",
-            "Forfaits restauration",
-            "Forfaits spa",
-            "Forfaits romantiques",
-            "Forfaits activités",
-            "Forfaits aventure ou excursion",
+            "Coffre-fort",
+            "Wifi Starlink",
+            "Mini bar",
+            "Smart TV",
+            "Serice de chambre",
+            "Ascenceur",
+            "Espace bureau",
+            "Telephone",
         ],
         unavailableCount: 3, // les 3 derniers sont indisponibles
     },
     {
-        title: "Avancé",
-        price: 590000,
-        duration: "/Mois",
+        title: "Suite Junior",
+        price: 145000,
+        duration: "/Nuitée",
+        description: 'Nos suites junior propose toutes les commodités de luxe pour assurer un séjour confortable aux voyageurs d\'affaires.Chaque espace a été conçu pour répondre aussi bien aux exigences d’un séjour professionnel qu’à celles d’un moment de détente. ',
         popular: true,
         features: [
-            "Forfaits personnels",
-            "Forfaits restauration",
-            "Forfaits spa",
-            "Forfaits romantiques",
-            "Forfaits activités",
-            "Forfaits aventure ou excursion",
+            "Coffre-fort",
+            "Wifi Starlink",
+            "Mini bar",
+            "Smart TV",
+            "Serice de chambre",
+            "Ascenceur",
+            "Espace bureau",
+            "Telephone",
         ],
         unavailableCount: 0,
     },
     {
-        title: "Premium",
-        price: 790000,
-        duration: "/Mois",
+        title: "Suite Senior",
+        price: 160000,
+        duration: "/Nuitée",
+        description: 'Nos suites senior sont spacieuses et confortables, avec un décor moderne, des équipements luxueux et des baies vitrées. Profitez d\'une vue imprenable sur la ville de Douala dans un confort optimal. ',
         popular: false,
         features: [
-            "Forfaits personnels",
-            "Forfaits restauration",
-            "Forfaits spa",
-            "Forfaits romantiques",
-            "Forfaits activités",
-            "Forfaits aventure ou excursion",
+            "Coffre-fort",
+            "Wifi Starlink",
+            "Mini bar",
+            "Smart TV",
+            "Serice de chambre",
+            "Ascenceur",
+            "Espace bureau",
+            "Telephone",
         ],
         unavailableCount: 0,
     },
@@ -69,7 +78,7 @@ export default function PricingPlan() {
                                 <div
                                     className="header-price bg-tertiary"
                                     style={{
-                                        backgroundImage: "url('/img/bg/line-pattern2.png')",
+                                       // backgroundImage: "url('/img/bg/line-pattern2.png')",
                                         backgroundSize: "cover",
                                         backgroundPosition: "center",
                                     }}
@@ -85,7 +94,7 @@ export default function PricingPlan() {
                                 <div className="box-content">
                                     <h3 className="box-title">{plan.title}</h3>
                                     <p className="box-text">
-                                        Envisagez-vous de réserver un hôtel bientôt ? Notre catégorie de réservation offre un large choix.
+                                        {plan.description}
                                     </p>
                                     <div className="checklist">
                                         <ul>

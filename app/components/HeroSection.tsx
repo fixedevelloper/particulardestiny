@@ -70,7 +70,7 @@ export default function HeroSection() {
                                 }}
                             >
                                 {/* Overlay (luxury effect) */}
-                                <div className="hero-overlay" />
+                      {/*          <div className="hero-overlay" />*/}
 
                                 <div className="hero-inner">
                                     <div className="container">

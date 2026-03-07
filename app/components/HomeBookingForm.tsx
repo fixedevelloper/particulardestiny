@@ -66,7 +66,7 @@ export default function HomeBookingForm() {
                             <input
                                 type="text"
                                 name="location"
-                                placeholder="Paris , france"
+                                placeholder="Douala , Cameroun"
                                 value={formData.location}
                                 onChange={handleChange}
                                 required
@@ -114,7 +114,7 @@ export default function HomeBookingForm() {
                                  {/*   <option value="" disabled>
                                        Choisir Clients
                                     </option>*/}
-                                    <option value="1">2 Adulte Seul</option>
+                                    <option value="1">1 Adulte</option>
                                     <option value="2">2 Adultes 1 Enfant</option>
                                     <option value="3">2 Adultes 2 Enfants</option>
                                     <option value="4">3 or 4+ Persones</option>
@@ -130,7 +130,7 @@ export default function HomeBookingForm() {
                         </div>
 
                         <a className="th-btn th-icon" href="/reservation-suites">
-                            NOS SUITES
+                            SUITES DISPONIBLES
                         </a>
 
                     </div>

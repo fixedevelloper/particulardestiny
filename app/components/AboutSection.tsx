@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import React from "react";
 import Link from "next/link";
+import CircleText from "./layouts/CircleText";
 
 const aboutSlides = [
     {
@@ -122,16 +123,17 @@ export default function AboutSection() {
                                             <p className="box-text">Années d’expérience pour être les meilleurs</p>
                                         </div>
                                         <img src="/img/normal/about_4_5.png" alt="Image bas" />
-                                        <div className="discount-wrapp">
+
+                                  {/*      <div className="discount-wrapp">
                                             <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" className="play-btn popup-video">
-                                                <i className="fa-solid fa-play"></i>
+                                                <i className="fa-solid fa-play"/>
                                             </a>
                                             <div className="discount-tag">
                                                 <span className="discount-anime">
-                                                    Particular Destiny Suites hotel depuis 1999* Particular Destiny Suites hotel depuis 1999*
+                                                   <CircleText />
                                                 </span>
                                             </div>
-                                        </div>
+                                        </div>*/}
                                     </div>
                                 </div>
 
