@@ -188,7 +188,7 @@ export default function BookingSidebar({room}: BookingSidebarProps) {
                                         }}
                                     />
 
-                                    <label>{service.name}</label>
+                                    <span>{service.name}</span>
                                 </div>
 
                                 <span className="text">

@@ -11,21 +11,21 @@ import CircleText from "./layouts/CircleText";
 
 const aboutSlides = [
     {
-        image: "/img/normal/about_4_2.png",
+        image: "/img/normal/Destiny suite.jpg",
         icon: "/img/icon/feature_card_3.svg",
         title: "Équipements complets de la Suite",
         link: "/room",
         text: "Nos Suites sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque Suite.",
     },
     {
-        image: "/img/normal/about_4_3.jpg",
+        image: "/img/normal/Destiny suite1.jpg",
         icon: "/img/icon/feature_card_2.svg",
         title: "Annulation sous 24H",
         link: "/room",
         text: "Nos Suites sont conçues pour vous offrir un confort maximal et une totale autonomie. Vous y trouverez un micro-ondes, un réfrigérateur et du café dans chaque Suite.",
     },
     {
-        image: "/img/normal/about_4_4.png",
+        image: "/img/normal/Destiny suite2.jpg",
         icon: "/img/icon/feature_card_1.svg",
         title: "Sécurité garantie",
         link: "/room",
@@ -44,7 +44,7 @@ export default function AboutSection() {
                         <div className="col-xxl-3">
                             <div className="img-box7">
                                 <div className="img1">
-                                    <img src="img/normal/about-01.jpg" alt="Image à propos" />
+                                    <img src="/img/normal/about-01.jpg" alt="Image à propos" />
                                 </div>
                             </div>
 
@@ -52,7 +52,7 @@ export default function AboutSection() {
                                 <div className="thumb">
                                     <img src="/img/normal/about_avater2.png" alt="Auteur" />
                                 </div>
-                                <h4 className="about-author-title">Andrew Karlex</h4>
+                                <h4 className="about-author-title">Yanou Ullin</h4>
                                 <span className="about-author-desig">Manager</span>
                                 <div className="author-sign">
                                     <img src="/img/normal/signature2.svg" alt="Signature" />
@@ -122,7 +122,7 @@ export default function AboutSection() {
                                             <h2 className="box-number"><span className="counter-number">150</span>+</h2>
                                             <p className="box-text">Années d’expérience pour être les meilleurs</p>
                                         </div>
-                                        <img src="/img/normal/about_4_5.png" alt="Image bas" />
+                                        <img src="/img/normal/Restaurant-Otaboo.jpg" alt="Image bas" />
 
                                   {/*      <div className="discount-wrapp">
                                             <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" className="play-btn popup-video">
