@@ -85,7 +85,7 @@ export default function RoomDetailPage() {
                                                 {room.images?.map((img:RoomImage) => (
                                                     <SwiperSlide key={img.id}>
                                                         <img
-                                                            src={room?.image?.thumb}
+                                                            src={img?.image?.thumb}
                                                             alt={img?.image?.name}
                                                             className="w-100 rounded"
                                                             style={{ height: "80px", objectFit: "cover", cursor: "pointer" }}
@@ -132,7 +132,7 @@ export default function RoomDetailPage() {
                                         {room.images?.map((img:RoomImage) => (
                                             <div key={img.id} className="col-md-4 mb-3">
                                                 <img
-                                                    src={room?.image?.thumb}
+                                                    src={img?.image?.thumb}
                                                     className="w-100 rounded"
                                                     alt={room?.image?.name}
                                                 />
