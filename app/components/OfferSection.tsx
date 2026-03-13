@@ -109,7 +109,7 @@ export default function OfferSection() {
                                         <div className="box-content">
                                             <div className="box-wrapp">
                                                 <div className="box-review">
-                                                    {[...Array(5)].map((_, i) => (
+                                                    {[...Array(3)].map((_, i) => (
                                                         <i key={i} >
                                                         <Star size={22} color="currentColor" /></i>
                                                     ))}

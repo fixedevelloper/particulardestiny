@@ -1,8 +1,8 @@
 import React from "react";
 const counters = [
-    { number: "20+", text: "Années d'expérience" },
-    { number: "50+", text: "Membres de l'équipe" },
-    { number: "50 000+", text: "Clients servis" },
+    { number: "10+", text: "Années d'expérience" },
+    { number: "25+", text: "Membres de l'équipe" },
+    { number: "30 000+", text: "Clients servis" },
     { number: "98 %", text: "Fidélisation annuelle des clients" },
 ];
 
