@@ -116,7 +116,7 @@ export default function RoomsPage() {
                                             </h3>
 
                                             <div className="box-review">
-                                                {[...Array(5)].map((_, i) => (
+                                                {[...Array(3)].map((_, i) => (
                                                     <Star key={i} size={16} fill="currentColor" stroke="currentColor" />
                                                 ))}
                                             </div>

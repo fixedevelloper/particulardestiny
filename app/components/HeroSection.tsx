@@ -78,7 +78,7 @@ export default function HeroSection() {
 
                                             {/* STARS */}
                                             <div className="hero-star-rating">
-                                                {[...Array(5)].map((_, i) => (
+                                                {[...Array(3)].map((_, i) => (
                                                     <i key={i} className="fas fa-star">
                                                         <Star size={24} />
                                                     </i>

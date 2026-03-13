@@ -101,7 +101,7 @@ export default function AboutPage() {
 
                                     <div className="customer-review">
                                         <div className="box-review">
-                                            <Star size={18} /><Star size={18} /><Star size={18} /><Star size={18} /><Star size={18} />
+                                            <Star size={18} /><Star size={18} /><Star size={18} />
                                         </div>
                                         <div className="box-content">
                                             <h2 className="box-number"><span className="counter-number">98</span>%</h2>

@@ -1,6 +1,6 @@
 import ScrollToTop from "./ScrollToTop";
 import React from "react";
-import {Copyright, Mail, MapPin, Phone} from "lucide-react";
+import {Copyright, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter, Youtube} from "lucide-react";
 import Link from "next/link";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -58,11 +58,11 @@ export default function AppFooterSection() {
                                             Vivez un pur moment de détente dans un cadre idyllique au sein de nos différentes suites hautement équipées, encadrées par une équipe qualifiée et réactive dédiée à vous offrir la meilleure expérience client.
                                         </p>
                                         <div className="th-social">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-twitter"></i></a>
-                                            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                                            <a href="#"><i className="fab fa-youtube"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="#"><i className="fab fa-facebook-f"> <Facebook /></i></a>
+                                            <a href="#"><i className="fab fa-twitter"></i> <Twitter /></a>
+                                            <a href="#"><i className="fab fa-linkedin-in"></i> <Linkedin /></a>
+                                            <a href="#"><i className="fab fa-youtube"></i> <Youtube /></a>
+                                            <a href="#"><i className="fab fa-instagram"></i> <Instagram /></a>
                                         </div>
                                     </div>
                                 </div>

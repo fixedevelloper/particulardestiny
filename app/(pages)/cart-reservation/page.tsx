@@ -65,12 +65,6 @@ export default function CartReservationPage() {
                                                 <i className="fa-sharp fa-solid fa-star">
                                                     <Star size={24}/>
                                                 </i>
-                                                <i className="fa-sharp fa-solid fa-star">
-                                                    <Star size={24}/>
-                                                </i>
-                                                <i className="fa-sharp fa-solid fa-star">
-                                                    <Star size={24}/>
-                                                </i>
                                             </div>
 
                                             <span className="title">4.9 Reviews</span>
